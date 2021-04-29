@@ -14,28 +14,19 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="container">
+		<div>
+			<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+   				 <a class="navbar-brand" href="/">LeprosoriumHQ</a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/new">Write down post</a>
+        </li>
+    </div>
+  </div>
 
-			<!-- Static navbar -->
-			<nav class="navbar navbar-default" role="navigation">
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="/">Leprosorium</a>
-			  </div>
-			  <div class="navbar-collapse collapse">
-			    <ul class="nav navbar-nav">
-			      <li><a href="/">Main</a></li>
-			      <li><a href="/new">New Posts</a></li>
-			      			    </ul>
-			  </div><!--/.nav-collapse -->
-			</nav>
+</nav>
 
-			<div>
+					<div>
 			      <%if @error && @error.length > 0 then %>
 			          <div class="alert alert-danger"><%=@error%></div>
 			        <% elsif @error1 && @error1.size >0 then%>

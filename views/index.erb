@@ -1,11 +1,9 @@
-<h2>Latests posts:</h2>
-<br/>
-<h2> <%= @message %> </h2>
-<% @results.each do |post|	%>
-	<h4> <%= post['NAME']%> </h4>
-	<h3> <%= post['CONTENT']%> </h3>
-	
-	<h5> Added at <%= post['CREATED_DATE']%> </h5>
-	<h4><a href="/details/<%= post['ID']%>">Comments</a></h4>
-	<hr />
-	<% end %> 
+<h2>Posts</h2>
+
+
+<% @posts.each do |post| %>
+
+<p>
+	<a href="/posts/<%= post.id %>"> <%= post.name %> </a>
+</p>
+	<%end%>
