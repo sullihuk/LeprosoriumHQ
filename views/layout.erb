@@ -2,43 +2,32 @@
 <html>
 	<head>
 		<title>Leprosorium</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Bootstrap -->
-		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		<![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/vendor/jquery-1.9.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
  
 	</head>
 	<body>
-		<div>
-			<nav class="navbar navbar-dark bg-dark">
-			<div class="container-fluid">
-   				 <a class="navbar-brand" href="/">LeprosoriumHQ</a>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/new">Write down post</a>
-        </li>
-    </div>
-  </div>
-
+		<div class=container>
+			<nav class="navbar  navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">LeprosoriumHQ</a>
+        <span class="nav-link" href="/new">Write down post</span>
 </nav>
-
-					<div>
-			      <%if @error && @error.length > 0 then %>
+					      <%if @error && @error.length > 0 then %>
 			          <div class="alert alert-danger"><%=@error%></div>
-			        <% elsif @error1 && @error1.size >0 then%>
-			        <div class="alert alert-danger"><%=@error1%></div>
-			      <% end %>
-			      <%= yield %>
-			</div>
+					        <% elsif @error1 && @error1.size >0 then%>
+						        <div class="alert alert-danger"><%=@error1%>
+
+							</div>
+			      				<% end %>
+			      				<%= yield %>
+				</div>
 
 	</div>
 
